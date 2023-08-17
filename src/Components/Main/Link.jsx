@@ -8,6 +8,7 @@ const Link = () => {
   const [err, setErr] = useState(false)
   const dispatch = useDispatch();
   const errors = useSelector(state => state.errorMsg)
+  
 
   function check() {
     if (input.trim() === "") {
@@ -29,7 +30,7 @@ const Link = () => {
           err ? <p className="absolute z-10 bottom-2 text-secondary italic">Please add a link</p> : "" 
       }
       {
-        errors ? "" : <p className="absolute z-10 bottom-2 text-secondary italic">Invalid URL</p>
+        errors ? <p className="absolute z-10 bottom-2 text-secondary italic">Invalid URL</p> : ""
       }
     </div>
   )

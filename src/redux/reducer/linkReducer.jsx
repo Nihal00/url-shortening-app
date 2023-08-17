@@ -1,9 +1,8 @@
-import { data } from "autoprefixer";
 import * as type from "../action/actionType";
 
 const initialState = {
     dataFetch: false,
-    errorMsg: true,
+    errorMsg: false,
     data: [],
 }
 
@@ -19,12 +18,12 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 data: action.payload,
-                errorMsg: true
+                errorMsg: false
             }
         case type.FETCHING_ERROR:
             return {
                 ...state,
-                errorMsg: action.payload,
+                errorMsg: true,
             }
         default:
             return {
