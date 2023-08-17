@@ -3,7 +3,7 @@ import * as type from "../action/actionType";
 
 const initialState = {
     dataFetch: false,
-    errorMsg: [],
+    errorMsg: true,
     data: [],
 }
 
@@ -18,7 +18,8 @@ const reducer = (state = initialState, action) => {
         case type.FETCHING_SUCCESSFULL:
             return {
                 ...state,
-                data: action.payload
+                data: action.payload,
+                errorMsg: true
             }
         case type.FETCHING_ERROR:
             return {

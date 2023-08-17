@@ -29,12 +29,12 @@ export const fetching = (url) => {
         dispatch(fetchingStarted());
 
         try {
-            const data = await axios.get(`https://api.shrtco.de/v2/shorten?url= ${url}`)
+            const data = await axios.get(`https://api.shrtco.de/v2/shorten?url=${url}`)
             dispatch(fetchingSuccess(data));
             console.log('Data', data);
         } catch (err) {
-            dispatch(fetchingError(err));
-            console.log(err);
+            dispatch(fetchingError(err.response.data.ok));
+            console.log(err.response.data.ok);
         }
 
     }

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useDispatch } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import { fetching } from "../../redux/action/linkAction"
 
 const Link = () => {
@@ -7,15 +7,14 @@ const Link = () => {
   const [input, setInput] = useState("")
   const [err, setErr] = useState(false)
   const dispatch = useDispatch();
+  const errors = useSelector(state => state.errorMsg)
 
   function check() {
     if (input.trim() === "") {
       return setErr(true);
     } else {
       setErr(false);
-
     }
-
     dispatch(fetching(input));
   }
 
@@ -27,7 +26,10 @@ const Link = () => {
       <button className="p-3 rounded-lg bg-primaryCyan text-[1rem] font-bold text-white z-10  md:w-[14rem] hover:bg-hovering" onClick={check} >Shorten It!</button>
 
       {
-        err ? <p className="absolute z-10 bottom-2 text-secondary italic">Please add a link</p> : ""
+          err ? <p className="absolute z-10 bottom-2 text-secondary italic">Please add a link</p> : "" 
+      }
+      {
+        errors ? "" : <p className="absolute z-10 bottom-2 text-secondary italic">Invalid URL</p>
       }
     </div>
   )
