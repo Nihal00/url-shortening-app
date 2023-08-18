@@ -1,16 +1,15 @@
-import React from 'react'
-import FaceBook from "../../assets/icon-facebook.svg";
-import Twitter from "../../assets/icon-twitter.svg";
-import Pinterest from "../../assets/icon-pinterest.svg";
-import Insta from "../../assets/icon-instagram.svg";
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSquareFacebook, faTwitter, faPinterest, faInstagram } from '@fortawesome/free-brands-svg-icons';
+
 
 const Logos = () => {
   return (
     <div className="flex flex-row gap-10">
-      <img src={FaceBook} alt="facebook" className="cursor-pointer" />
-      <img src={Twitter} alt="twitter" className="cursor-pointer" />
-      <img src={Pinterest} alt="pinterest" className="cursor-pointer" />
-      <img src={Insta} alt="instagram" className="cursor-pointer" />
+      <FontAwesomeIcon icon={faSquareFacebook} className="text-white text-2xl hover:text-primaryCyan" />
+      <FontAwesomeIcon icon={faTwitter} className="text-white text-2xl hover:text-primaryCyan"  />
+      <FontAwesomeIcon icon={faPinterest} className="text-white text-2xl hover:text-primaryCyan" />
+      <FontAwesomeIcon icon={faInstagram} className="text-white text-2xl hover:text-primaryCyan" />
     </div>
   )
 }
