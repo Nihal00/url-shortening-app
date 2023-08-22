@@ -4,7 +4,7 @@ import Button from "../../Common/Button";
 
 const index = () => {
   return (
-    <div className="flex flex-col gap-3 md:flex-row-reverse px-6 md:px-24 mb-20">
+    <div className="flex flex-col gap-3 md:flex-row-reverse px-6 md:px-20 mb-20">
       <div className="">
         <img src={MainLogo} alt="hero section logo" className="" />
       </div>

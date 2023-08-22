@@ -1,21 +1,28 @@
 import React from 'react'
 import { Link } from "react-router-dom"
+import Style from "../Style"
 
-export const Navbar = () => {
+const Navbar = () => {
     return (
-        <div className="flex flex-col items-end gap-3 absolute right-4 top-[6rem]  md:static md:flex-row-reverse">
-            <Link to="" className="px-4 py-1 rounded-2xl bg-primaryCyan text-white hover:bg-hovering" >Sign up</Link>
-            <Link className="px-4 py-1 rounded-2xl hover:bg-primaryCyan hover:text-white">Login</Link>
-        </div>
+        <nav className={`${Style.Navbar}`}>
+            <div className="flex flex-col items-center gap-5 py-7 w-[80%] px-8 md:flex-row">
+                <Link to="" className={`${Style.NavLink}`}>Features</Link>
+                <Link to="" className={`${Style.NavLink}`}>Pricing</Link>
+                <Link to="" className={`${Style.NavLink}`}>Rources</Link>
+            </div>
+            
+            <div className="flex flex-col-reverse border-t w-[80%] items-center gap-4 py-7 md:border-none md:flex-row-reverse md:w-[50%]">
+                <Link to="" className="font-bold px-5 py-2 rounded-2xl bg-primaryCyan text-white hover:bg-hovering" >Sign up</Link>
+                <Link to="" className="font-bold px-4 py-1 text-white rounded-2xl hover:bg-primaryCyan hover:text-white md:text-gray">Login</Link>
+            </div>
+        </nav>
     )
 }
 
-export const Navbar1 = () => {
-    return (
-        <div className="invisible flex md:flex-row gap-4 md:visible">
-            <Link className="px-4 py-1 rounded-2xl hover:bg-hovering hover:text-white">Login</Link>
-            <Link to="" className="px-4 py-1 rounded-2xl bg-primaryCyan text-white hover:bg-hovering" >Sign up</Link>
-        </div>
-    )
-}
+
+
+export default Navbar;
+
+
+
 

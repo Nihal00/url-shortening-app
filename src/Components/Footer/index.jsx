@@ -6,7 +6,7 @@ import Logos from './Logos';
 
 const index = () => {
   return (
-    <div className="flex flex-col items-center -mt-1 py-16 bg-darkBlue  gap-6  md:grid md:grid-flow-col md:place-items-center md:items-start md:px-1 md:gap-4">
+    <div className="flex flex-col items-center -mt-1 py-16 bg-darkBlue  gap-6  lg:grid lg:grid-flow-col lg:place-items-center lg:items-start md:px-1 md:gap-4">
       <img src={Logo1} alt="logo" className="hover:fill-primaryCyan w-32 pb-10" />
       <div className="flex flex-col items-center gap-10 text-white md:grid md:grid-flow-col md:place-items-start pb-6 ">
         {

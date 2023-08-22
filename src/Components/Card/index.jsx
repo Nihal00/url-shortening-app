@@ -4,7 +4,7 @@ import content from "./content";
 
 const index = () => {
     return (
-        <div className="flex flex-col gap-10 pb-32 relative bg-lightgray lg:grid lg:grid-flow-col lg:grid-cols-3 lg:gap-5 px-6 md:px-24">
+        <div className="flex flex-col gap-10 pb-32 relative bg-lightgray lg:grid lg:grid-flow-col lg:grid-cols-3 lg:gap-5 px-6 md:px-20">
             {
                 content.map((cont) => (
                     <div key={cont.id} className={`flex flex-col gap-4 items-center px-4 pt-20 pb-11 w-full bg-white rounded-xl relative z-10 lg:items-start lg:place-content-center lg:px-8 lg:mb-32 ${cont.id === 2 ? "lg:relative top-10" : cont.id === 3 ? "lg:relative top-24" : ""}`}>
